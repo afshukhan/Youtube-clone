@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <i class="fa-solid fa-bars menu-icon"></i>
+      <img src="youtubee.jpg" alt="YouTube Logo" class="youtube-logo">
+    </div>
+
+    <div class="center-group">
+      <div class="search-wrapper">
+        <div class="search">
+          <input id="searchInput" placeholder="Search">
+          <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <button class="mic-btn" aria-label="Voice Search">
+          <i class="fa-solid fa-microphone"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="right-group">
+      <button class="create-btn"><i class="fa-solid fa-plus"></i> Create</button>
+      <button class="icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button>
+      <button class="profile-btn" aria-label="Profile"><img src="pfpp.jpg" alt="Profile" /></button>
+    </div>
+  </header>
+
+  <div class="sub-nav">
+    <button>All</button>
+    <button>Music</button>
+    <button>Podcast</button>
+    <button>Study Skills</button>
+    <button>Dua</button>
+    <button>Live</button>
+    <button>Computer Programming</button>
+    <button>Thoughts</button>
+    <button>Mixes</button>
+    <button>Test</button>
+    <button>Pop Music</button>
+    <button>Comedy</button>
+    <button>Recently Upload</button>
+    <button>New to you</button>
+  </div>
+
+  <div class="container">
+    <aside class="side-nav">
+      <a href="#"><i class="fa-solid fa-house"></i><span>Home</span></a>
+      <a href="#"><i class="fa-solid fa-bolt"></i><span>Shorts</span></a>
+      <a href="#"><i class="fa-solid fa-tv"></i><span>Subscriptions</span></a>
+      <hr>
+      <p class="heading">You</p>
+      <a href="#"><i class="fa-solid fa-clock-rotate-left"></i><span>History</span></a>
+      <a href="#"><i class="fa-solid fa-list"></i><span>Playlists</span></a>
+      <a href="#"><i class="fa-regular fa-clock"></i><span>Watch Later</span></a>
+      <a href="#"><i class="fa-regular fa-thumbs-up"></i><span>Liked Videos</span></a>
+      <hr>
+      <p class="heading">Subscriptions</p>
+      <a href="#"><img src="Simpli learn.jpg" class="mini">Simplilearn</a>
+      <a href="#"><img src="Apna College.jpg" class="mini">Apna College</a>
+      <a href="#"><img src="Motivational Quotes.jpg" class="mini">Motivational Quotes</a>
+      <a href="#"><img src="Learn Coding.jpg" class="mini">Learn Coding</a>
+      <a href="#"><img src="Ipl.jpg" class="mini">IPL</a>
+      <a href="#" id="showMore">Show more…</a>
+      <div id="moreSubs" class="hidden">
+        <a href="#"><img src="T series.jpg" class="mini">T Series</a>
+        <a href="#"><img src="Netflix.jpg" class="mini">Netflix</a>
+        <a href="#"><img src="Zee5.jpg" class="mini">Zee 5</a>
+        <a href="#"><img src="Jio Hotstar.jpg" class="mini">Jio Hotstar</a>
+        <a href="#"><img src="Big boss.jpg" class="mini">Big Boss</a>
+        <a href="#"><img src="Canva.jpg" class="mini">Canva</a>
+        <a href="#"><img src="Sony Liv.jpg" class="mini">Sony Liv</a>
+      </div>
+      <hr>
+      <p class="heading">Explore</p>
+      <a href="#"><i class="fa-solid fa-bag-shopping"></i>Shopping</a>
+      <a href="#"><i class="fa-solid fa-music"></i>Music</a>
+      <a href="#"><i class="fa-solid fa-film"></i>Films</a>
+      <a href="#"><i class="fa-solid fa-wifi"></i>Live</a>
+      <a href="#"><i class="fa-solid fa-gamepad"></i>Gaming</a>
+      <a href="#"><i class="fa-solid fa-newspaper"></i>News</a>
+      <a href="#"><i class="fa-solid fa-medal"></i>Sport</a>
+      <a href="#"><i class="fa-solid fa-chalkboard-user"></i>Courses</a>
+      <a href="#"><i class="fa-solid fa-shirt"></i>Fashion & Beauty</a>
+      <a href="#"><i class="fa-solid fa-podcast"></i>Podcast</a>
+      <hr>
+      <p class="heading">More from YouTube</p>
+      <a href="#"><i class="fa-brands fa-youtube"></i>YouTube Premium</a>
+      <a href="#"><i class="fa-brands fa-youtube"></i>YouTube Music</a>
+      <a href="#"><i class="fa-brands fa-youtube"></i>YouTube Kids</a>
+      <hr>
+      <a href="#"><i class="fa-solid fa-gear"></i>Settings</a>
+      <a href="#"><i class="fa-solid fa-flag"></i>Report History</a>
+      <a href="#"><i class="fa-solid fa-circle-question"></i>Help</a>
+      <a href="#"><i class="fa-regular fa-comment-dots"></i>Send Feedback</a>
+      <hr>
+      <p class="copyright">© 2025 Google LLC</p>
+    </aside>
+
+    <main class="main">
+      <!-- For You Section -->
+      <section class="video-section">
+        <h2 class="section-title">For You</h2>
+        <div class="video-grid">
+          <div class="video-row">
+            <!-- 6 demo videos (same as before) -->
+            <div class="video-thumb" data-src="sample1.mp4">
+              <img src="TMKOC.jpg" alt="Taarak Mehta">
+              <div class="video-info">
+                <p class="video-title">NEW! Taarak Mehta Ka Ooltah Chashmah | Ep 4506 | 18 Sep 2025 | Teaser</p>
+                <p class="video-channel">Sony SAB</p>
+                <p class="video-meta">1 M views • 1 day ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample2.mp4">
+              <img src="saiyara old.jpg" alt="Saiyaara">
+              <div class="video-info">
+                <p class="video-title">Saiyaara (1980) Ft. Kishore Kumar Full song (Old version)</p>
+                <p class="video-channel">90's Hits</p>
+                <p class="video-meta">2.9 M views • 1 month ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample3.mp4">
+              <img src="khel khel mein.jpg" alt="Khel Khel Mein">
+              <div class="video-info">
+                <p class="video-title">KHEL KHEL MEIN Full Movie, Akshay Kuma, Ammy Virk, Vaani Kapoor Taapsee panu Full Movie</p>
+                <p class="video-channel">T-series Happy Hours</p>
+                <p class="video-meta">1 M views • 1 year ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample4.mp4">
+              <img src="cooking tutorial.jpg" alt="Mini Samosa">
+              <div class="video-info">
+                <p class="video-title">Crispy & tasty mini samosa recipe | How to make samosa at home</p>
+                <p class="video-channel">Cookingdiaryathome</p>
+                <p class="video-meta">99.9k views • 10 months ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample5.mp4">
+              <img src="dil diya galla.jpg" alt="Dil Diyan Gallan">
+              <div class="video-info">
+                <p class="video-title">Dil Diyan Gallan Full Song | Tiger Zinda Hai | Salman Khan, Katrina Kaif</p>
+                <p class="video-channel">YRF</p>
+                <p class="video-meta">187 M views • 7 years ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample6.mp4">
+              <img src="ranjha.jpg" alt="Ranjha">
+              <div class="video-info">
+                <p class="video-title">Ranjha – Official Video | Shershaah | Sidharth–Kiara</p>
+                <p class="video-channel">Sony Music India</p>
+                <p class="video-meta">415 M views • 4 years ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Shorts Section -->
+      <section class="shorts-section">
+        <div class="shorts-heading">
+          <img src="YouTube Shorts Logo.jpg" alt="Shorts logo">
+          <span>Shorts</span>
+        </div>
+        <div class="shorts-grid limited-scroll">
+          <div class="short-thumb">
+            <img src="Purav Jha.jpg" alt="Short 1">
+            <div class="short-info">
+              <p class="short-title">Purav jha is all-rounder #puravjha #shorts</p>
+              <p class="short-meta">3.9 M views</p>
+            </div>
+          </div>
+          <div class="short-thumb">
+            <img src="Editing.jpg" alt="Short 2">
+            <div class="short-info">
+              <p class="short-title">How To EDIT Like Pro | Mobile Video EDITING Course 2025</p>
+              <p class="short-meta">22.9 K views</p>
+            </div>
+          </div>
+          <div class="short-thumb">
+            <img src="MR beast.jpg" alt="Short 3">
+            <div class="short-info">
+              <p class="short-title">No Such Thing as a Perfect Video</p>
+              <p class="short-meta">1.9 M views</p>
+            </div>
+          </div>
+          <div class="short-thumb">
+            <img src="Rekha.jpg" alt="Short 4">
+            <div class="short-info">
+              <p class="short-title">Rekha ji in her 20's</p>
+              <p class="short-meta">99.9 K views</p>
+            </div>
+          </div>
+          <div class="short-thumb">
+            <img src="podcast.jpg" alt="Short 5">
+            <div class="short-info">
+              <p class="short-title">Manoj Bajpayee Unfiltered – Life, Fame, OTT Success</p>
+              <p class="short-meta">89.6 K views</p>
+            </div>
+          </div>
+          <div class="short-thumb">
+            <img src="3 idiots.jpg" alt="Short 2">
+            <div class="short-info">
+              <p class="short-title">How To EDIT Like Pro | Mobile Video EDITING Course 2025</p>
+              <p class="short-meta">22.9 K views</p>
+            </div>
+          </div>
+          <div class="short-thumb">
+            <img src="sholay.jpg" alt="Short 3">
+            <div class="short-info">
+              <p class="short-title">No Such Thing as a Perfect Video</p>
+              <p class="short-meta">1.9 M views</p>
+            </div>
+          </div>
+          <div class="short-thumb">
+            <img src="jab we met.jpg" alt="Short 4">
+            <div class="short-info">
+              <p class="short-title">Rekha ji in her 20's</p>
+              <p class="short-meta">99.9 K views</p>
+            </div>
+          </div>
+          <div class="short-thumb">
+            <img src="ms dhoni.jpg" alt="Short 5">
+            <div class="short-info">
+              <p class="short-title">Manoj Bajpayee Unfiltered – Life, Fame, OTT Success</p>
+              <p class="short-meta">89.6 K views</p>
+            </div>
+          </div>
+          <div class="short-thumb">
+            <img src="capcut new tutorial.jpg" alt="Short 6">
+            <div class="short-info">
+              <p class="short-title">capcut new tutorial • capcut shake tutorial •</p>
+              <p class="short-meta">10 K views</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-section">
+        <h2 class="section-title">Music Hits</h2>
+        <div class="video-grid">
+          <div class="video-row">
+            <!-- 6 demo videos (same as before) -->
+            <div class="video-thumb" data-src="sample1.mp4">
+              <img src="dekha ek khwab 2.jpg" alt="dekha ek khwab">
+              <div class="video-info">
+                <p class="video-title">Dekha Ek Khwab Song | Silsila | Amitabh Bachchan, Rekha | Kishore Kumar, Lata Mangeshkar,</p>
+                <p class="video-channel">YRF</p>
+                <p class="video-meta">100 M views • 9 years ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample2.mp4">
+              <img src="jhol 2.jpg" alt="Saiyaara">
+              <div class="video-info">
+                <p class="video-title">Jhol | Coke Studio Pakistan | Season 15 | Maanu x Annural Khalid</p>
+                <p class="video-channel">Coke Studio Pakistan</p>
+                <p class="video-meta">2.9 M views • 1 month ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample3.mp4">
+              <img src="main rahoon 2.jpg" alt="Khel Khel Mein">
+              <div class="video-info">
+                <p class="video-title">Main Rahoon Ya Na Rahoon Full Video | Emraan Hashmi, Esha Gupta</p>
+                <p class="video-channel">T-series</p>
+                <p class="video-meta">50 M views • 1 year ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample4.mp4">
+              <img src="param sundari 2.jpg" alt="Mini Samosa">
+              <div class="video-info">
+                <p class="video-title">Param Sundari -Official Video | Mimi | Kriti Sanon, Pankaj Tripathi |</p>
+                <p class="video-channel">Sony Music India</p>
+                <p class="video-meta">555m views • 10 months ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample5.mp4">
+              <img src="humraah.jpg" alt="Dil Diyan Gallan">
+              <div class="video-info">
+                <p class="video-title">Humraah Full Song | Malang | Aditya R K, Disha P Anil K Kunal K</p>
+                <p class="video-channel">T-series</p>
+                <p class="video-meta">187 M views • 7 years ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample6.mp4">
+              <img src="tu hi to.jpg" alt="Ranjha">
+              <div class="video-info">
+                <p class="video-title">Tu Hi Hai - Full Video | Half Girlfriend | Arjun Kapoor & Shraddha Kapoor </p>
+                <p class="video-channel">Zee Music Company</p>
+                <p class="video-meta">415 M views • 4 years ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-section">
+        <h2 class="section-title">Podcast</h2>
+        <div class="video-grid">
+          <div class="video-row">
+            <!-- 6 demo videos (same as before) -->
+            <div class="video-thumb" data-src="sample1.mp4">
+              <img src="podcast 3.jpg" alt="Ranveer alahbadia">
+              <div class="video-info">
+                <p class="video-title">How BeerBiceps became a 100 crores Media Giant? | Indian Business Podcast : Episode 11</p>
+                <p class="video-channel">Beer biceps</p>
+                <p class="video-meta">1 M views • 29 days ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample2.mp4">
+              <img src="iron man 3.jpg" alt="Robert downey">
+              <div class="video-info">
+                <p class="video-title">How Robert Downey Jr Went From Convict to Iron Man</p>
+                <p class="video-channel">Podcaster</p>
+                <p class="video-meta">2.9 M views • 1 month ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample3.mp4">
+              <img src="mr beast 3.jpg" alt="Khel Khel Mein">
+              <div class="video-info">
+                <p class="video-title">@MrBeast On YouTube, Income, Business, Career, Content Creators & Beast Games</p>
+                <p class="video-channel">Raj Shamani</p>
+                <p class="video-meta">1 M views • 5 days ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample4.mp4">
+              <img src="raj shamani 3.jpg" alt="raj shamani">
+              <div class="video-info">
+                <p class="video-title">Vijay Mallya Podcast: Rise & Downfall Of Kingfisher Airlines, Loans & RCB</p>
+                <p class="video-channel">Raj Shamani</p>
+                <p class="video-meta">10m views • 10 months ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample5.mp4">
+              <img src="khan sir 3.jpg" alt="Raj shamani">
+              <div class="video-info">
+                <p class="video-title">Khan Sir Podcast: India vs China, Pakistan, Bihar’s Reality & Geopolitics</p>
+                <p class="video-channel">Raj shamani</p>
+                <p class="video-meta">187 M views • 1 years ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample6.mp4">
+              <img src="ravi gupta 3.jpg" alt="Ravi gupta">
+              <div class="video-info">
+                <p class="video-title">I Regret Inviting Ravi Gupta on My Podcast!!</p>
+                <p class="video-channel">Prakhar Sharma</p>
+                <p class="video-meta">4 M views • 1 year ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-section">
+        <h2 class="section-title">Mixes</h2>
+        <div class="video-grid">
+          <div class="video-row">
+            <!-- 6 demo videos (same as before) -->
+            <div class="video-thumb" data-src="sample1.mp4">
+              <img src="mixes1.jpg" alt="Taarak Mehta">
+              <div class="video-info">
+                <p class="video-title">Old Vs New Bollywood Mashup Songs 2020|Old To New 4|Hindi Songs Love Mashup</p>
+                <p class="video-channel">Music</p>
+                <p class="video-meta">1 M views • 1 month ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample2.mp4">
+              <img src="mixes2.jpg" alt="Saiyaara">
+              <div class="video-info">
+                <p class="video-title">Bollywood Ultimate Jukebox | Non Stop Mashups</p>
+                <p class="video-channel">90's Hits</p>
+                <p class="video-meta">2.9 M views • 1 year ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample3.mp4">
+              <img src="mixes3.jpg" alt="Khel Khel Mein">
+              <div class="video-info">
+                <p class="video-title">90s Love Songs | Bollywood Evergreen 90's Love Songs | 90s Hits Hindi Songs</p>
+                <p class="video-channel">Music india</p>
+                <p class="video-meta">1 M views • 1 year ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample4.mp4">
+              <img src="mixes4.jpg" alt="Mini Samosa">
+              <div class="video-info">
+                <p class="video-title">Arijit Singh X Atif aslam Mashup | Best of Arijit singh and Atif aslam Mashup</p>
+                <p class="video-channel">Love Mashup</p>
+                <p class="video-meta">99.9k views • 1 months ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample5.mp4">
+              <img src="mixes5.jpg" alt="Dil Diyan Gallan">
+              <div class="video-info">
+                <p class="video-title">Romantic love mashup | Bollywood Songs</p>
+                <p class="video-channel">Mashup</p>
+                <p class="video-meta">187 M views • 7 years ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample6.mp4">
+              <img src="mixes6.jpg" alt="Ranjha">
+              <div class="video-info">
+                <p class="video-title">90s Love Songs | Bollywood Evergreen 90's Love Songs | 90s Hits Hindi Songs </p>
+                <p class="video-channel">Sony Music India</p>
+                <p class="video-meta">415 M views • 4 years ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-section">
+        <h2 class="section-title">Comedy and More</h2>
+        <div class="video-grid">
+          <div class="video-row">
+            <!-- 6 demo videos (same as before) -->
+            <div class="video-thumb" data-src="sample1.mp4">
+              <img src="kapil sharma.jpg" alt="Taarak Mehta">
+              <div class="video-info">
+                <p class="video-title">The Kapil Sharma Show - दी कपिल शर्मा शो</p>
+                <p class="video-channel">Set india</p>
+                <p class="video-meta">1 M views • 1 day ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample2.mp4">
+              <img src="ashish chanchalani.jpg" alt="Saiyaara">
+              <div class="video-info">
+                <p class="video-title">Sasta Biig Bosss 2 | Parody | Ashish Chanchlanip>
+                <p class="video-channel">Ashish chanchalani vines</p>
+                <p class="video-meta">45m views • 1 year ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample3.mp4">
+              <img src="taaza khabar.jpg" alt="Khel Khel Mein">
+              <div class="video-info">
+                <p class="video-title">BB Ki Vines Productions- Taaza Khabar | Hotstar Specials</p>
+                <p class="video-channel">BB ki vines</p>
+                <p class="video-meta">100 M views • 6 month ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample4.mp4">
+              <img src="purav jha rap.jpg" alt="Mini Samosa">
+              <div class="video-info">
+                <p class="video-title">The all Indian rappers | Purav Jha</p>
+                <p class="video-channel">Purav jha</p>
+                <p class="video-meta">22m views • 10 months ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample5.mp4">
+              <img src="tarak mehta.jpg" alt="Dil Diyan Gallan">
+              <div class="video-info">
+                <p class="video-title">Tarak Mehta Ka oolta chashma | Episodes</p>
+                <p class="video-channel">Sony TV</p>
+                <p class="video-meta">187 M views • 7 years ago</p>
+              </div>
+            </div>
+            <div class="video-thumb" data-src="sample6.mp4">
+              <img src="bhool bhulaiyya.jpg" alt="Ranjha">
+              <div class="video-info">
+                <p class="video-title">Bhool Bhulaiyya | Full Movie | HD</p>
+                <p class="video-channel">Bollywood Movies</p>
+                <p class="video-meta">415 M views • 4 years ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
