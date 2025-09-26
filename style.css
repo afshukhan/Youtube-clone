@@ -1,0 +1,505 @@
+/* ===== Global ===== */
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+/* ===== Top Navigation Bar ===== */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 56px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-icon {
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.youtube-logo {
+  width: 150px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* ===== Centered Search + Mic ===== */
+.center-group {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search {
+  display: flex;
+  width: 400px;
+  height: 36px;
+  border: 1px solid #303030;
+  border-radius: 48px;
+  overflow: hidden;
+  background: #121212;
+}
+
+.search input {
+  flex: 1;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+}
+
+.search button {
+  width: 40px;
+  border: none;
+  background: #222;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-left: 1px solid #303030;
+}
+
+.search button:hover {
+  background: #333;
+}
+
+.search button i {
+  font-size: 16px;
+}
+
+/* Mic button */
+.mic-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #222;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+}
+
+.mic-btn:hover {
+  background: #333;
+}
+
+.mic-btn i {
+  font-size: 16px;
+}
+
+/* ===== Right corner buttons ===== */
+.right-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.create-btn {
+  padding: 0 12px;
+  height: 36px;
+  background: #222;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.create-btn i {
+  font-size: 14px;
+}
+
+.create-btn:hover {
+  background: #333;
+}
+
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #222;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: #fff;
+}
+
+.icon-btn i {
+  font-size: 16px;
+}
+
+.icon-btn:hover {
+  background: #333;
+}
+
+.profile-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #222;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.2s;
+}
+
+.profile-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-btn:hover {
+  background: #333;
+}
+
+/* ===== Layout Container ===== */
+.container {
+  display: flex;
+  height: calc(100vh - 56px);
+  overflow: hidden;
+}
+
+/* ===== Sidebar ===== */
+.side-nav {
+  width: 220px;
+  padding: 8px;
+  background: #000;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.side-nav::-webkit-scrollbar {
+  width: 8px;
+}
+
+.side-nav::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.side-nav::-webkit-scrollbar-thumb {
+  background-color: #222;
+  border-radius: 4px;
+}
+
+.side-nav::-webkit-scrollbar-thumb:hover {
+  background-color: #444;
+}
+
+.side-nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 204px;
+  height: 40px;
+  padding: 0 16px;
+  font: 14px "Roboto", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.side-nav a:hover {
+  background: #333;
+  padding: 0 14px;
+  border-radius: 6px;
+}
+
+.side-nav .heading {
+  font-weight: 500;
+  font-size: 14px;
+  margin: 12px 0 4px 16px;
+}
+
+.side-nav .mini {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.hidden {
+  display: none;
+}
+
+.copyright {
+  font-size: 12px;
+  padding: 8px 16px;
+  color: #aaa;
+}
+
+/* ===== Sub Navbar ===== */
+.sub-nav {
+  position: absolute;
+  top: 56px;
+  left: 220px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+  background: transparent;
+}
+
+.sub-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.sub-nav button {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.sub-nav button:hover {
+  background: #333;
+}
+
+/* ===== Main Content ===== */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px 30px;
+  background: #000;
+  overflow-y: auto;
+  scrollbar-width: none;
+  min-height: auto;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== Video Section ===== */
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.video-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.video-row {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 8px;
+
+  overflow-x: auto;      /* keep horizontal scroll */
+  overflow-y: visible;   /* allow captions to show fully */
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.video-row::-webkit-scrollbar { display: none; }
+
+.video-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.video-row::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+/* --- Video Row / Thumbnails --- */
+.video-row {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 8px;
+  align-items: flex-start;   /* 👈 ensures all thumbs align from the top */
+}
+
+.video-thumb {
+  flex: 0 0 auto;
+  width: 360.39px;
+  /* remove any auto height differences */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* keep caption aligned left */
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 207.71px;         /* 👈 force same image height */
+  border-radius: 8px;
+  object-fit: cover;        /* crop without stretching */
+}
+
+
+.video-info {
+  max-width: 307px;
+  margin-top: 6px;
+  padding-bottom: 4px;
+}
+
+.video-title {
+  width: 283px;
+  color: #f1f1f1;
+  font: 16px "Roboto", Arial, sans-serif;
+  line-height: 19px;
+  margin: 0 0 2px 0;
+}
+
+.video-channel {
+  color: #aaaaaa;
+  font: 12px "Roboto", Arial, sans-serif;
+  margin: 0 0 2px 0;
+}
+
+.video-meta {
+  color: #888888;
+  font: 12px "Roboto", Arial, sans-serif;
+  margin: 0;
+}
+
+/* ===== Shorts Section ===== */
+.shorts-section {
+  margin: 5px 0;
+}
+
+.shorts-heading {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 16px;
+}
+
+.shorts-heading img {
+  width: 40px;
+  height: 40px;
+}
+
+.shorts-heading span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.shorts-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+}
+
+.shorts-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.short-thumb {
+  width: 234.91px;
+  border-radius: 8px;
+  overflow: visible;
+  flex: 0 0 auto;
+  cursor: pointer;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.short-thumb img {
+  width: 100%;
+  height: 352.36px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.short-info {
+  margin-top: 6px;
+  width: 100%;
+  color: #fff;
+  font-family: "Roboto", Arial, sans-serif;
+  display: block;
+  white-space: normal;
+}
+
+.short-caption {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 4px;
+  width: 234.91px;
+  line-height: 16px;
+  word-wrap: break-word;
+}
+
+.short-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0 0 2px 0;
+  color: #f1f1f1;
+  display: block;
+  white-space: normal;
+}
+
+.short-meta {
+  font-size: 12px;
+  color: #aaaaaa;
+  margin: 0;
+  display: block;
+  white-space: normal;
+}
+
+/* ===== Spacing Between Video Sections ===== */
+.video-section {
+  margin-bottom:12px;
+}
